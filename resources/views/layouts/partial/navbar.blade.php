@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="/kucing">Kucing</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/makanan-kucing">Makanan Kucing</a>
+                </li>
             </ul>
         </div>
     </div>
