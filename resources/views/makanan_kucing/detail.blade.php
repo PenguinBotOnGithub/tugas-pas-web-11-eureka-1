@@ -13,7 +13,7 @@
             <td>{{ $makanan_kucing->nama }}</td>
             <td>{{ $makanan_kucing->disukai }}</td>
             <td>{{ $makanan_kucing->popularitas }}</td>
-            <td>{{ $makanan_kucing->harga }}</td>
+            <td>{{ 'Rp ' . $makanan_kucing->harga }}</td>
             <td>{{ date_format(date_create($makanan_kucing->terakhir_beli), 'd / F / Y') }}</td>
         </tr>
     </table>

@@ -47,6 +47,36 @@ INSERT INTO `kucings` VALUES (1,'Kucing Jawir','Ponorogo','https://external-cont
 UNLOCK TABLES;
 
 --
+-- Table structure for table `makanan_kucings`
+--
+
+DROP TABLE IF EXISTS `makanan_kucings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `makanan_kucings` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `nama` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `disukai` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `popularitas` double unsigned NOT NULL,
+  `harga` int NOT NULL,
+  `terakhir_beli` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `makanan_kucings`
+--
+
+LOCK TABLES `makanan_kucings` WRITE;
+/*!40000 ALTER TABLE `makanan_kucings` DISABLE KEYS */;
+INSERT INTO `makanan_kucings` VALUES (1,'Nasi Goreng Whiskas','Kucing Jawir',7,35000,'2023-10-14',NULL,NULL),(2,'Sate Tikus','Kucing Nolep',6.8,15000,'2023-08-23',NULL,NULL);
+/*!40000 ALTER TABLE `makanan_kucings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `makanans`
 --
 
@@ -88,7 +118,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +127,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (10,'2019_12_14_000001_create_personal_access_tokens_table',1),(11,'2023_11_14_014630_create_makanans_table',1),(12,'2023_11_14_015047_create_kucings_table',1);
+INSERT INTO `migrations` VALUES (10,'2019_12_14_000001_create_personal_access_tokens_table',1),(11,'2023_11_14_014630_create_makanans_table',1),(12,'2023_11_14_015047_create_kucings_table',1),(14,'2023_11_21_010528_create_makanan_kucings_table',2);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -110,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-14 13:59:30
+-- Dump completed on 2023-11-21  8:44:21
